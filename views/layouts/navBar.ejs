@@ -29,7 +29,7 @@
                 <form action="/search" class="form-wrapper">
                     <input type="search" placeholder="Search" class="form-control">
                 </form>
-                <a href="/register" class="link-item">Accounts</a>
+                <a href="/accounts" class="link-item">Accounts</a>
                 <a href="/login" class="link-item">Support</a>
             </div>
         </li>
@@ -39,11 +39,20 @@
                 <i class="fas fa-search"></i>
             </form>
         </li>
-        <li class="navbar-item">
-            <a href="/register" class="navbar-link">Register</a>
-        </li>
-        <li class="navbar-item">
-            <a href="/login" class="navbar-link">Login</a>
-        </li>
+        <% if(!loggedIn) { %>
+            <li class="navbar-item">
+                <a href="/accounts" class="navbar-link">Register</a>
+            </li>
+            <li class="navbar-item">
+                <a href="/login" class="navbar-link">Login</a>
+            </li>
+        <% } else { %>
+            <li class="navbar-item">
+                <a href="/profile" class="navbar-link">Profile</a>
+            </li>
+            <li class="navbar-item">
+                <a href="/logout" class="navbar-link">Logout</a>
+            </li>
+        <% } %>
     </ul>
 </nav>

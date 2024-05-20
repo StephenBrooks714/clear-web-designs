@@ -29,7 +29,7 @@ app.use(async (req, res, next) => {
 });
 
 require('dotenv').config();
-const generator = SitemapGenerator('http://localhost:8080/', {
+const generator = SitemapGenerator('https://www.webexpress.pro/', {
     stripQuerystring: false
 });
 // register event listeners
