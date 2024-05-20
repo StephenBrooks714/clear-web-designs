@@ -1,0 +1,36 @@
+.animate-right {
+    animation: animate-right 0.5s ease-in-out;
+    animation-duration: calc(0.5s * var(--animate-repeat));
+
+    &:hover {
+        animation-play-state: paused;
+
+        @keyframes animate-right {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(10px);
+            }
+        }
+
+        @keyframes animate-right {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(10px);
+            }
+        }
+
+        @keyframes animate-right {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(10px);
+            }
+        }
+
+    }
+}
