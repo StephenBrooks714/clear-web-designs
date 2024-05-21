@@ -113,12 +113,6 @@ body {
   align-items: center;
   text-decoration: none;
 }
-.arrow:hover {
-  background-color: #fff;
-  color: #343a40;
-  border: 1px solid #343a40;
-  animation: forwards;
-}
 
 .text-center {
   text-align: center;

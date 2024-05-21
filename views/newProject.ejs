@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<header>
+    <%- include('layouts/navBar') -%>
+</header>
+
+<main class="container" style="margin-top: 170px; margin-bottom: 70px;">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-lg-8">
+            <h1 class="display-4 mb-2">New Project</h1>
+            <form action="/store/project" method="post" enctype="multipart/form-data">
+                <label for="title" class="form-label">Project Title</label>
+                <input type="text" name="title" id="title" class="form-control mb-2">
+                <label for="url" class="form-label">Project Url</label>
+                <input type="url" name="url" id="url" class="form-control mb-2">
+                <label for="image" class="form-label">Project Url</label>
+                <input type="file" name="image" id="image" accept="image/*" class="form-control mb-2">
+                <button class="btn btn-primary" type="submit">submit post</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<%- include('layouts/footer') -%>
+</body>
+</html>

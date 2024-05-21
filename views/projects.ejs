@@ -8,59 +8,19 @@
 
 <main class="container-fluid h-100" style="margin-top: 130px; margin-bottom: 60px;">
     <div class="row text-center justify-content-center">
-        <div class="col-lg-12 mb-3">
+        <div class="col-lg-12 mb-2">
             <h1 class="text-center display-2">Our Projects</h1>
             <hr class="about-line">
         </div>
-        <div class="col-lg-3 mb-2">
-            <a href="" class="hover-zoom">
-                <h2 class="mb-1">Project 1</h2>
-                <img src="https://placehold.co/600x400" class="img-fluid shadow-lg rounded" alt="project" loading="lazy" />
-            </a>
-        </div>
-        <div class="col-lg-3 mb-2">
-            <a href="" class="hover-zoom">
-                <h2 class="mb-1">Project 1</h2>
-                <img src="https://placehold.co/600x400" class="img-fluid shadow-lg rounded" alt="project" loading="lazy" />
-            </a>
-        </div>
-        <div class="col-lg-3 mb-2">
-            <a href="" class="hover-zoom">
-                <h2 class="mb-1">Project 1</h2>
-                <img src="https://placehold.co/600x400" class="img-fluid shadow-lg rounded" alt="project" loading="lazy" />
-            </a>
-        </div>
-        <div class="col-lg-3 mb-2">
-            <a href="" class="hover-zoom">
-                <h2 class="mb-1">Project 1</h2>
-                <img src="https://placehold.co/600x400" class="img-fluid shadow-lg rounded" alt="project" loading="lazy" />
-            </a>
-        </div>
-        <div class="col-lg-3 mb-2">
-            <a href="" class="hover-zoom">
-                <h2 class="mb-1">Project 1</h2>
-                <img src="https://placehold.co/600x400" class="img-fluid shadow-lg rounded" alt="project" loading="lazy" />
-            </a>
-        </div>
-        <div class="col-lg-3 mb-2">
-            <a href="" class="hover-zoom">
-                <h2 class="mb-1">Project 1</h2>
-                <img src="https://placehold.co/600x400" class="img-fluid shadow-lg rounded" alt="project" loading="lazy" />
-            </a>
-        </div>
-        <div class="col-lg-3 mb-2">
-            <a href="" class="hover-zoom">
-                <h2 class="mb-1">Project 1</h2>
-                <img src="https://placehold.co/600x400" class="img-fluid shadow-lg rounded" alt="project" loading="lazy" />
-            </a>
-        </div>
-        <div class="col-lg-3 mb-2">
-            <a href="" class="hover-zoom">
-                <h2 class="mb-1">Project 1</h2>
-                <img src="https://placehold.co/600x400" class="img-fluid shadow-lg rounded" alt="project" loading="lazy" />
-            </a>
-        </div>
-        <div class="col-lg-12 mt-4">
+        <% for(i=0; i < projects.length; i++) { %>
+            <div class="col-lg-3 mb-2">
+                <a href="<%= projects[i].url %>" target="_blank" class="hover-zoom">
+                    <h4 class="mb-1"><%= projects[i].title %></h4>
+                    <img src="<%= projects[i].image %>" class="img-fluid shadow-lg rounded" alt="<%= projects[i].title %>" loading="lazy" />
+                </a>
+            </div>
+        <% } %>
+        <div class="col-lg-12 mt-4 mb-3">
             <a href="mailto:stephenbrooks714@gmail.com" class="btn btn-primary">Hire Us For A Project</a>
             <a href="contact.ejs" class="btn btn-outline-primary">Contact Us For Support</a>
         </div>
